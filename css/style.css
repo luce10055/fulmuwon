@@ -1,0 +1,602 @@
+@charset 'utf-8';
+@import url('font.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'NotoSansKR', 'sans-serif';
+    line-height: 1;
+    letter-spacing: 1;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* 공통부분 */
+.wrap {
+    position: relative;
+    display: block;
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 117rem;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/* 상단 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+    width: 100%;
+    height: 7.6rem;
+}
+
+.header .container {
+    height: 100%;
+}
+
+.logo {
+    position: relative;
+    display: block;
+}
+
+.logo img {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+
+    cursor: pointer;
+}
+
+.gnb {
+    position: absolute;
+    top: 50%;
+    right: 21rem;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.depth1>li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 16rem;
+    text-align: center;
+}
+
+.depth1>li::before {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    display: block;
+    content: '';
+    width: 0.2rem;
+    height: 1.2rem;
+    background-color: #aaaaab;
+}
+
+.depth1>li:first-child::before {
+    content: none;
+}
+
+.depth1>li>a {
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+
+    padding: 1.5rem 5.3rem;
+}
+
+.header-all>a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -7.6rem;
+    display: block;
+    margin: right;
+    width: 8.5rem;
+    height: 7.6rem;
+    background-color: #e6e6e6;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 7.6rem
+}
+
+
+/* 비주얼 */
+.visual {
+    position: relative;
+    display: block;
+    text-align: center;
+    height: 70.8rem;
+    margin-bottom: 6rem;
+}
+
+.visual-main {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+
+    content: '';
+    background: url('../images/main-visual_01.jpg') no-repeat center;
+    background-position: 0 0;
+    width: 192rem;
+    height: 74.5rem;
+    background-size: 100%;
+
+}
+
+.visual-main img {
+    width: 192rem;
+}
+
+.visual-tit {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.visual-tit img {
+    position: absolute;
+    top: 20rem;
+    left: 2rem;
+    display: block;
+    width: 35.2rem;
+}
+
+
+/* 소개 */
+.brand {
+    position: relative;
+    display: block;
+}
+
+.brand .container {
+    padding-left: 13.5rem;
+    padding-bottom: 8rem;
+    border-bottom: 0.1rem solid #d3d3d3;
+}
+
+.brand-list {
+    position: relative;
+    display: block;
+    width: 30rem;
+    height: 26.5rem;
+    text-align: center;
+}
+
+.brand-box {}
+
+.brand-box>img {
+    width: 11.5rem;
+    height: 11.4rem;
+}
+
+.brand-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #617c05;
+    line-height: 4.5rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+}
+
+.brand-txt {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #505050;
+    line-height: 3rem;
+}
+
+/* 제품 */
+.item {
+    position: relative;
+    display: block;
+    margin-top: 7.2rem;
+}
+
+.item .container {}
+
+.item-list {
+    margin-right: 7rem;
+    text-align: center;
+}
+
+.item-list:last-child {
+    margin-right: 0;
+}
+
+.item-box {
+    width: 100%;
+}
+
+.item-box>img {
+    text-align: center;
+}
+
+.item-title {
+    font-size: 1.7rem;
+    line-height: 1;
+    color: #000;
+
+    margin-top: 1.2rem;
+}
+
+.item-txt {
+    font-size: 1.4rem;
+    color: #6d6d6d;
+    line-height: 1;
+    margin-top: 1.8rem;
+}
+
+/* 워터마크 */
+.water-mark {
+    position: relative;
+    display: block;
+    margin: 7rem 0;
+}
+
+.water-mark .container>img {
+    position: relative;
+    display: block;
+}
+
+/* 장점 */
+.good {
+    position: relative;
+    display: block;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.good-box {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 29.2rem;
+    height: 20.8rem;
+}
+
+.good-box::before {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    display: block;
+    content: '';
+    width: 0.1rem;
+    height: 3.8rem;
+    background-color: #bbbdc2;
+}
+
+.good-box:first-child::before {
+    content: none;
+}
+
+.good-list {
+    position: relative;
+    display: block;
+}
+
+.good-list-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 7.5rem;
+}
+
+.good-list-img>img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.good-title {
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 1;
+
+    margin-top: 2.3rem;
+}
+
+.good-txt {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #666;
+    line-height: 2.1rem;
+    margin-top: 1.8rem;
+}
+
+/* 베너 */
+.banner {
+    position: relative;
+    display: block;
+    height: 25rem;
+    margin: 6rem 0 11rem;
+}
+
+.banner-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+
+    content: '';
+    width: 240rem;
+    height: 25rem;
+    background: url('../images/main_banner_01.jpg') no-repeat center;
+    background-position: 0 0;
+    background-size: 240rem;
+}
+
+/* 커뮤니티 */
+.comm {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.comm-box {
+    margin: 0 auto;
+
+}
+
+.comm-list {
+    text-align: center;
+    width: 58.5rem;
+}
+
+
+.comm-list>img {
+    position: relative;
+    display: block;
+    text-align: center;
+    border-bottom: 0.1rem solid #bababa;
+    padding-bottom: 1.7rem;
+}
+
+.comm-title {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+
+    padding: 2.2rem 1.2rem;
+}
+
+/* 하단 */
+.footer {
+    position: relative;
+    display: block;
+    margin-top: 11rem;
+    padding-top: 4.5rem;
+    border-top: 0.1rem solid #f2f2f2;
+}
+
+.footer .container {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.footer-top {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3.3rem;
+}
+
+.footer-top>span {
+    margin-left: 1.8rem;
+}
+
+.footer-top>span:first-child {
+    margin-left: 0;
+}
+
+.footer-top-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    padding: 1.2rem 1.6rem;
+    border: 0.1rem solid #000;
+}
+
+.footer-top-list {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #666;
+}
+
+.footer-top-list>a>img {
+    padding-left: 11rem;
+    padding-right: 0.5rem;
+}
+
+.footer-notice {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6.5rem;
+}
+
+.footer-notice>a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-notice>a::before {
+    position: absolute;
+    top: 0.3rem;
+    left: 0rem;
+    display: block;
+    content: '';
+    background-color: rgb(176, 176, 176);
+    width: 0.1rem;
+    height: 1rem;
+}
+
+.footer-notice>a:first-child::before {
+    content: none;
+}
+
+.footer-notice>a>span {
+    font-size: 1.4rem;
+    line-height: 1.82rem;
+    color: #000;
+    letter-spacing: -0.07rem;
+    margin: 0 2.5rem;
+}
+
+.footer-notice>a>span>b {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    letter-spacing: -0.07rem;
+}
+
+.fooer-call {
+    position: relative;
+    display: block;
+}
+
+.footer-call-box {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.footer-call-box::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+    width: 0.1rem;
+    height: 9.4rem;
+    background-color: #cccccc;
+}
+
+.footer-call-box:first-child::before {
+    content: none;
+}
+
+.footer-call-box>p {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #222;
+
+    margin-bottom: 1rem;
+}
+
+.footer-call-box>a>strong {
+    position: relative;
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    margin-bottom: 0.8rem;
+}
+
+.footer-call-box>span {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #222;
+}
+
+.footer-bottom {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.footer-bottom-list {
+    position: relative;
+    display: inline-block;
+
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #7b7b7b;
+}
+
+.footer-bottom-top>span {
+    margin-left: 1.5rem;
+}
+
+.footer-bottom-top>span:first-child {
+    margin-left: 0;
+}
+
+.footer-bottom-down {
+    margin-top: 1rem;
+}
+
+.footer-bottom-down>span {
+    margin-left: 1.5rem;
+}
+
+.footer-bottom-down>span:first-child {
+    margin-left: 0;
+}
